@@ -1,0 +1,38 @@
+package com.Capg.spring.classbased;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Bike {
+	private int bikeId;
+	private String bikeName;
+	private String color;
+	public int getBikeId() {
+		return bikeId;
+	}
+	@Value("120")
+	public void setBikeId(int bikeId) {
+		this.bikeId = bikeId;
+	}
+	public String getBikeName() {
+		return bikeName;
+	}
+	@Value("Yamaha")
+	public void setBikeName(String bikeName) {
+		this.bikeName = bikeName;
+	}
+	public String getColor() {
+		return color;
+	}
+	@Value("Red")
+	public void setColor(String color) {
+		this.color = color;
+	}
+	@Override
+	public String toString() {
+		return "Bike [bikeId=" + bikeId + ", bikeName=" + bikeName + ", color=" + color + "]";
+	}
+	
+	
+}

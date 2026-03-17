@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	
+	<bean name="student2" class="com.Capg.spring.Student">
+	<property name="id" value="100"></property>
+	<property name="name" value="Steven"></property>
+	<property name="gender" value="male"></property>
+	<property name="marks" value="95"></property>
+	
+	
+	</bean>
+	
+	<bean name="Employee" class="com.Capg.spring.Employee" autowire="byName">
+	<property name="id" value="1233"></property>
+	<property name="name" value="Raju"></property>
+	<property name="gmail" value="raju@gmail.com"></property>
+	<property name="salary" value="120000.00"></property>
+	<!-- <property name="student" ref="student1"></property> -->
+	</bean>
+	
+	<bean name="student1" class="com.Capg.spring.Student">
+	<constructor-arg value="102"></constructor-arg> 
+	<constructor-arg value="Mark"></constructor-arg>
+	<constructor-arg value="male"></constructor-arg>
+	<constructor-arg value="97"></constructor-arg>
+	
+	
+	</bean>
+	
+</beans>
+
